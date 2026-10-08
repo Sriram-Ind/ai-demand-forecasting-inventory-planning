@@ -1,0 +1,4 @@
+,MAE,RMSE,MAPE_%,MAE improvement vs baseline,Bias (avg pred - actual)
+Same as last week,9.08,12.05,19.92,0.0,1.33
+XGBoost,5.92,7.67,13.0,34.7,-0.06
+Prophet,6.36,8.3,13.77,30.0,-0.16

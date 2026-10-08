@@ -1,0 +1,25 @@
+Rows compared (identical for all models): 46,000; store-items: 500; 2017-10-01 to 2017-12-31
+
+== RESULTS TABLE ==
+                    MAE   RMSE  MAPE_%  MAE improvement vs baseline  Bias (avg pred - actual)
+Same as last week  9.08  12.05   19.92                          0.0                      1.33
+XGBoost            5.92   7.67   13.00                         34.7                     -0.06
+Prophet            6.36   8.30   13.77                         30.0                     -0.16
+
+== HOW BROADLY DOES EACH MODEL WIN? (per store-item MAE) ==
+XGBoost beats baseline on 100.0% of the 500 store-items
+Prophet beats baseline on 100.0% of the 500 store-items
+XGBoost beats Prophet on  88.6% of the 500 store-items
+Best model per store-item: {'XGBoost': 443, 'Prophet': 57}
+
+MAE by month of test period:
+        Same as last week  XGBoost  Prophet
+month                                     
+Oct                 8.52     6.07     6.17
+Nov                 8.83     6.30     6.92
+Dec                 9.87     5.42     5.99
+
+MAE on 1-3 Dec (the baseline's worst days): {'Same as last week': 20.41, 'XGBoost': 5.68, 'Prophet': 9.09}
+
+Store 2, item 15 MAE: {'Same as last week': 12.76, 'XGBoost': 8.0, 'Prophet': 9.19}
+Saved charts 06-09 and reports/results_table.csv

@@ -1,0 +1,17 @@
+Fit on 2013-02-04..2017-06-30 (804,000 rows); validate on 2017-07-01..2017-09-30 (46,000 rows)
+Early stopping chose 700 trees (validation MAE 6.569)
+
+== XGBOOST RESULTS (test period, all 500 store-items) ==
+MAE 5.92 | RMSE 7.67 | MAPE 13.0%
+
+Top 10 features by importance (share of the model's splitting 'gain'):
+lag_7          42.9%
+rollmean_7     23.7%
+lag_14          9.7%
+rollmean_28     6.5%
+lag_364         3.1%
+dow_sin         2.2%
+is_weekend      1.9%
+month           1.8%
+dayofweek       1.7%
+month_sin       1.2%

@@ -1,0 +1,5 @@
+Fitting Prophet for 500 store-items...
+Done in 45s
+
+== PROPHET RESULTS (500 store-items, test period) ==
+MAE 6.36 | RMSE 8.30 | MAPE 13.8%

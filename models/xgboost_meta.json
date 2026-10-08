@@ -1,0 +1,30 @@
+{
+  "n_trees": 700,
+  "features": [
+    "store",
+    "item",
+    "dayofweek",
+    "is_weekend",
+    "day",
+    "month",
+    "quarter",
+    "year",
+    "dayofyear",
+    "weekofyear",
+    "is_month_start",
+    "is_month_end",
+    "month_sin",
+    "month_cos",
+    "dow_sin",
+    "dow_cos",
+    "lag_7",
+    "lag_14",
+    "lag_21",
+    "lag_28",
+    "lag_364",
+    "rollmean_7",
+    "rollmean_28",
+    "rollstd_28"
+  ],
+  "test_start": "2017-10-01"
+}

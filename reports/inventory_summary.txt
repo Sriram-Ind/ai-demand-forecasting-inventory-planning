@@ -1,0 +1,38 @@
+Target service level 95% (z = 1.645); lead time 7 days
+Simulated 13 full weeks x 500 store-items per model = 6,500 order decisions each
+
+A) Each model uses its own error to size safety stock (target 95% of weeks without stockout)
+model                  Same as last week  XGBoost
+weeks_with_stockout_%               3.02     4.68
+service_level_%                    96.98    95.32
+fill_rate_%                        99.91    99.89
+units_short_per_week                0.36     0.42
+avg_safety_stock                   56.20    38.03
+avg_left_over_stock                66.05    38.14
+avg_order_up_to                   448.57   420.60
+
+B) No safety stock (order exactly the forecast)
+model                  Same as last week  XGBoost
+weeks_with_stockout_%              42.48    49.03
+fill_rate_%                        97.34    97.75
+units_short_per_week               10.17     8.63
+
+C) Same safety stock for both (the baseline's amount): which forecast leaves fewer stockouts?
+model                  Same as last week  XGBoost
+weeks_with_stockout_%               3.02     0.95
+fill_rate_%                        99.91    99.98
+units_short_per_week                0.36     0.06
+avg_left_over_stock                66.05    55.95
+
+Sample order decisions for the week starting 2017-10-01 (XGBoost):
+ store  item  forecast  safety_stock  reorder_point  actual
+     1     1       158            21            179     127
+     2     1       213            26            238     227
+     3     1       187            25            212     199
+     4     1       179            27            207     202
+     5     1       133            18            151     139
+     6     1       125            16            141     134
+     7     1       120            20            140     115
+     8     1       213            25            238     228
+     9     1       180            22            203     202
+    10     1       186            30            216     211

@@ -1,0 +1,39 @@
+Leakage check passed: 200 random rows rebuilt from history ending 7 days earlier gave identical features.
+
+Rows before dropping warm-up days: 913,000; after: 896,000 (17,000 dropped, 34 days per store-item)
+Rows still missing lag_364 (first year only): 165,000
+Columns (26): ['date', 'store', 'item', 'sales', 'dayofweek', 'is_weekend', 'day', 'month', 'quarter', 'year', 'dayofyear', 'weekofyear', 'is_month_start', 'is_month_end', 'month_sin', 'month_cos', 'dow_sin', 'dow_cos', 'lag_7', 'lag_14', 'lag_21', 'lag_28', 'lag_364', 'rollmean_7', 'rollmean_28', 'rollstd_28']
+
+Saved data/processed/features.parquet
+
+Correlation of each feature with sales (closer to +1 or -1 = more related):
+lag_364           0.932
+lag_7             0.929
+lag_14            0.921
+rollmean_7        0.918
+rollmean_28       0.913
+lag_21            0.913
+lag_28            0.905
+rollstd_28        0.844
+month_cos        -0.260
+dayofweek         0.225
+is_weekend        0.181
+year              0.166
+dow_sin          -0.158
+month_sin        -0.134
+quarter           0.076
+dow_cos          -0.070
+month             0.066
+dayofyear         0.065
+weekofyear        0.064
+item             -0.056
+store            -0.008
+day               0.002
+is_month_start    0.001
+is_month_end      0.000
+
+Sample rows:
+        date  store  item  sales  dayofweek  is_weekend  day  month  quarter  year  dayofyear  weekofyear  is_month_start  is_month_end
+0 2013-02-04      1     1     14          0           0    4      2        1  2013         35           6               0             0
+1 2013-02-05      1     1      9          1           0    5      2        1  2013         36           6               0             0
+2 2013-02-06      1     1     10          2           0    6      2        1  2013         37           6               0             0

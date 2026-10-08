@@ -1,0 +1,11 @@
+# Kaggle's raw data is not committed (competition rules); download it from the link in the README.
+data/raw/*
+!data/raw/.gitkeep
+
+# Python / environment clutter
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+.DS_Store

@@ -1,0 +1,93 @@
+
+== DATA QUALITY ==
+Missing values per column:
+ date     0
+store    0
+item     0
+sales    0
+Days per store-item: min 1826, max 1826 (full calendar = 1826)
+Days with zero sales: 1 rows (0.000%)
+Negative sales: 0
+Spikes > 3 std above own mean: 2373 rows (0.260%)
+
+== OVERALL TREND (all stores and items) ==
+Total units sold per year:
+ date
+2013     7941243
+2014     9135482
+2015     9536887
+2016    10357160
+2017    10733740
+Year-on-year growth:
+ date
+2014    15.0
+2015     4.4
+2016     8.6
+2017     3.6
+  saved reports/figures/01_total_sales_trend.png
+
+== WEEKLY PATTERN (avg units per store-item per day) ==
+Mon    41.4
+Tue    48.2
+Wed    48.4
+Thu    51.7
+Fri    55.2
+Sat    58.7
+Sun    62.1
+Busiest day vs quietest day: 50.0% higher
+  saved reports/figures/02_weekly_seasonality.png
+
+== YEARLY PATTERN (avg units per store-item per day) ==
+Jan    35.5
+Feb    39.4
+Mar    47.3
+Apr    55.2
+May    59.1
+Jun    63.0
+Jul    67.0
+Aug    59.1
+Sep    55.1
+Oct    51.2
+Nov    55.2
+Dec    39.4
+Peak month Jul vs lowest Jan: 88.6% higher
+  saved reports/figures/03_yearly_seasonality.png
+
+== STORE DIFFERENCES (avg units per item per day) ==
+store
+7     36.4
+6     39.7
+5     39.8
+1     47.3
+4     54.9
+9     55.0
+10    58.7
+3     59.5
+8     64.1
+2     67.0
+Best store vs worst store: 84.3% higher
+
+== ITEM DIFFERENCES ==
+Top 3 items:
+item
+15    88.0
+28    87.9
+13    84.3
+Bottom 3 items:
+item
+5     18.4
+1     22.0
+41    22.0
+Best item vs worst item: 4.8x
+  saved reports/figures/04_store_item_differences.png
+
+== ONE STORE-ITEM EXAMPLE (store 1, item 1) ==
+count    1826.0
+mean       20.0
+std         6.7
+min         4.0
+25%        15.0
+50%        19.0
+75%        24.0
+max        50.0
+  saved reports/figures/05_single_store_item.png

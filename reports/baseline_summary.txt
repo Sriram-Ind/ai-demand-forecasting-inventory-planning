@@ -1,0 +1,31 @@
+Train: 2013-02-04 to 2017-09-30 (850,000 rows)
+Test:  2017-10-01 to 2017-12-31 (46,000 rows, 92 days)
+Check passed: baseline equals actual sales 7 days earlier from the raw file.
+
+== BASELINE RESULTS (all 500 store-items, test period) ==
+MAE   : 9.08 units
+RMSE  : 12.05 units
+MAPE  : 19.9 %
+(average actual sales in test period: 54.7 units/day)
+
+MAE by weekday of the day being predicted:
+dow
+Mon    7.95
+Tue    8.82
+Wed    8.78
+Thu    9.07
+Fri    9.26
+Sat    9.61
+Sun    9.97
+
+Across the 500 store-items:
+  MAE  range 4.05 to 15.67 (median 9.04)
+  MAPE range 10.9% to 40.6% (median 18.8%)
+  Correlation of avg sales with MAE:  0.94
+  Correlation of avg sales with MAPE: -0.85
+
+Worst-forecast days (by units missed, summed over all store-items):
+date
+2017-12-02    10679
+2017-12-03    10628
+2017-12-01     9307
